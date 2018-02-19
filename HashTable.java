@@ -89,3 +89,91 @@ public class HashTable {
 
 
 }
+
+	public static void main(String[] args) {
+
+		HashTable hashTable = new HashTable();
+		Random random = new Random();
+		Scanner scanner = new Scanner(System.in);
+		int input = 1;
+
+		hashTable.insert(new Patient("Dr. Wu           ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Bedi Pranika     ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Ronald Green     ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Kevin Tieu       ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Allan Ho         ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Timonthy Ho      ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Axel Hugo        ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Justin Leinbach  ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Alex Len         ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Anish Patel      ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Parth Patel      ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Minh Phan        ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Tommy Phan       ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Luis Reyes       ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Paras Segal      ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Karan Sheth      ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Yuta Sugiura     ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Tong Hung        ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Solbi You        ", random.nextInt(10000)));
+		hashTable.insert(new Patient("John McGinley    ", random.nextInt(10000)));
+
+		while (input != 5) {
+
+			System.out.println("\n1: Diplay Hash Table: ");
+			System.out.println("2: Insert Patient: ");
+			System.out.println("3: Delete Patien: ");
+			System.out.println("4: Search Patient: ");
+			System.out.println("5: Exit Program: ");
+			System.out.println("Please Select Option: ");
+
+			input = scanner.nextInt();
+			if (input == 1) {
+				System.out.println("You Entered: " + input + "\n");
+				hashTable.displayHashTable();
+				System.out.println();
+			}
+
+			else if (input == 2) {
+				System.out.println("You Entered: " + input + "\n");
+				System.out.println("Enter Patient Name: ");
+				String name = scanner.next();
+				System.out.println("Patient Name: " + name + scanner.nextLine());
+				int key = (random.nextInt(100000) + 1);
+				hashTable.insert(new Patient(name, key));
+				System.out.println("\nPatient: " + name + " has been inserted");
+				System.out.println("Hash Value: " + key + "\n");
+				System.out.println("Hash Table \n");
+				hashTable.displayHashTable();
+			}
+
+			else if (input == 3) {
+
+				System.out.println("Enter the patient's name: ");
+				String name = scanner.next();
+				System.out.println("Patient Name: " + name + scanner.nextLine());
+				System.out.println("Enter Patient Key: ");
+				int dValue = scanner.nextInt();
+				hashTable.HashDelete(new Patient(name, dValue));
+				hashTable.displayHashTable();
+
+			}
+
+			else if (input == 4) {
+				System.out.println("You Entered: " + input + "\n");
+				System.out.println("Enter Priority Number: ");
+				int num = scanner.nextInt();
+				hashTable.HashSearch(num);
+				System.out.println("Priority Number: " + num + "\n");
+
+			}
+
+			else {
+				System.out.println("You Entered: " + input + "\n");
+				System.out.println("Thank you for your time");
+				scanner.close();
+
+			}
+
+		}
+	}

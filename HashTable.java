@@ -97,26 +97,12 @@ public class HashTable {
 		Scanner scanner = new Scanner(System.in);
 		int input = 1;
 
-		hashTable.insert(new Patient("Dr. Wu           ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Bedi Pranika     ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Ronald Green     ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Kevin Tieu       ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Allan Ho         ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Timonthy Ho      ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Axel Hugo        ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Justin Leinbach  ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Alex Len         ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Anish Patel      ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Parth Patel      ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Minh Phan        ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Tommy Phan       ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Luis Reyes       ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Paras Segal      ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Karan Sheth      ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Yuta Sugiura     ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Tong Hung        ", random.nextInt(10000)));
-		hashTable.insert(new Patient("Solbi You        ", random.nextInt(10000)));
-		hashTable.insert(new Patient("John McGinley    ", random.nextInt(10000)));
+		hashTable.insert(new Patient("Patient 1  ", random.nextInt(100)));
+		hashTable.insert(new Patient("Patient 2  ", random.nextInt(100)));
+		hashTable.insert(new Patient("Patient 3  ", random.nextInt(100)));
+		hashTable.insert(new Patient("Patient 4  ", random.nextInt(100)));
+		hashTable.insert(new Patient("Patient 5  ", random.nextInt(100)));
+		
 
 		while (input != 5) {
 
